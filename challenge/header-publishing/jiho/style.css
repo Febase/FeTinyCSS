@@ -42,8 +42,25 @@ body {
 }
 
 #Header #HeaderMenu .MenuItem {
-  margin: 0 1rem;
+  padding: 0.5rem;
+  font-size: 0.8rem;
   font-weight: 700;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.MenuItem:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.MenuItem img {
+  width: 0.6rem;
+  height: 0.6rem;
+  padding: 3px;
+  margin-left: 0.3rem;
 }
 
 #Header #LoginButton {
@@ -65,4 +82,12 @@ body {
   width: 1rem;
   height: 1rem;
   margin-left: 0.5rem;
+}
+
+main {
+  padding: 1.5rem;
+}
+
+main h1 {
+  margin: 0px;
 }
