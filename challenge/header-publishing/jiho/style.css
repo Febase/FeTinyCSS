@@ -4,12 +4,30 @@ body {
   box-sizing: border-box;
 }
 
+header {
+  position: sticky;
+  top: -50px;
+}
+
+#Banner {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
+  color: white;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+#Banner p {
+  padding: 0;
+  margin: 0;
+}
+
 #Header {
   /* Tip: Stick Header */
-  position: sticky;
-  top: -1rem;
   padding: 0.5rem 1.5rem;
-  padding-top: 1rem;
   background-color: white;
   display: flex;
   justify-content: space-between;
