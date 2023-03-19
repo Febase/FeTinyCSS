@@ -5,7 +5,6 @@ body {
 }
 
 #Header {
-  /* TODO: Check Header Responsive Width */
   background-color: white;
   display: flex;
   justify-content: space-between;
@@ -31,6 +30,7 @@ body {
   min-height: 56px;
   display: flex;
   align-items: center;
+  gap: 1rem;
 }
 
 @media (max-width: 500px) {
@@ -39,7 +39,7 @@ body {
   }
 }
 
-#Header #HeaderCenterMenu .MenuItem {
+.MenuItem {
   padding: 0.5rem;
   font-size: 0.8rem;
   font-weight: 700;
@@ -50,9 +50,9 @@ body {
   align-items: center;
 }
 
-#Header #HeaderCenterMenu .MenuItem:not(:last-child) {
+/* #Header #HeaderCenterMenu .MenuItem:not(:last-child) {
   margin-right: 1rem;
-}
+} */
 
 #Header #HeaderCenterMenu .MenuItem img {
   width: 0.6rem;
@@ -63,14 +63,45 @@ body {
 
 #Header #SideMenu {
   display: none;
-  flex-direction: column;
   position: fixed;
-  background-color: #eee;
-  border: 1px dashed black;
+  border-left: 1px solid #eee;
+  background-color: #fff;
   top: 0px;
   right: 0px;
   height: 100vh;
   width: 300px;
+  max-width: 60vw;
+  padding-top: 2rem;
+}
+
+#Header #SideMenuBackdrop {
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 99;
+}
+
+#Header #SideMenuBackdrop.show {
+  display: block;
+}
+
+#Header #SideMenu.show {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 100;
+}
+
+#Header #SideMenu .MenuItem {
+  padding: 1rem;
+}
+
+#Header #SideMenu .MenuItem:hover {
+  background-color: #eee;
 }
 
 #Header #HeaderRightMenu {
