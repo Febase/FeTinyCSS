@@ -9,19 +9,36 @@
   </head>
   <body>
     <header id="Header">
-      <div id="Logo"><img src="./assets/tailwind-logo.svg" alt="logo" /></div>
-      <div id="HeaderMenu">
+      <div id="Logo">
+        <img
+          width="16"
+          height="16"
+          src="./assets/tailwind-logo.svg"
+          alt="logo"
+        />
+      </div>
+      <div id="HeaderCenterMenu">
         <button class="MenuItem">
-          <p>Product</p>
+          <span>Product</span>
           <img width="16" height="16" src="./assets/nav-down-arrow.png" />
         </button>
         <button class="MenuItem">MarketPlace</button>
         <button class="MenuItem">Features</button>
       </div>
-      <button id="LoginButton">
-        <span>Log in</span>
-        <img width="16" height="16" src="./assets/right-arrow.png" />
-      </button>
+      <div id="SideMenu" aria-expanded="false">
+        <button class="MenuItem">Product</button>
+        <button class="MenuItem">MarketPlace</button>
+        <button class="MenuItem">Features</button>
+      </div>
+      <div id="HeaderRightMenu">
+        <button id="LoginButton">
+          <span>Log in</span>
+          <img width="16" height="16" src="./assets/right-arrow.png" />
+        </button>
+        <button id="MoreButton">
+          <img width="16" height="16" src="./assets/more.png" />
+        </button>
+      </div>
     </header>
     <main>
       <h1>Hello</h1>
