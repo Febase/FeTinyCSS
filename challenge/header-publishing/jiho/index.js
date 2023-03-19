@@ -8,13 +8,26 @@ moreButton.addEventListener("click", () => {
 });
 
 sideMenuBackDrop.addEventListener("click", () => {
-  sideMenu.classList.remove("show");
-  sideMenuBackDrop.classList.remove("show");
+  closeSideMenu();
 });
 
 sideMenu.addEventListener("click", (event) => {
   if (event.target.matches(".MenuItem")) {
-    sideMenu.classList.remove("show");
-    sideMenuBackDrop.classList.remove("show");
+    closeSideMenu();
   }
 });
+
+const sideMenuCloseBtn = document.querySelector("#SideMenuCloseBtn");
+sideMenuCloseBtn.addEventListener("click", () => {
+  closeSideMenu();
+});
+
+function closeSideMenu() {
+  sideMenu.classList.remove("show");
+  sideMenuBackDrop.classList.remove("show");
+}
+
+function openSideMenu() {
+  sideMenu.classList.add("show");
+  sideMenuBackDrop.classList.add("show");
+}

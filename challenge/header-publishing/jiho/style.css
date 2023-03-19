@@ -50,10 +50,6 @@ body {
   align-items: center;
 }
 
-/* #Header #HeaderCenterMenu .MenuItem:not(:last-child) {
-  margin-right: 1rem;
-} */
-
 #Header #HeaderCenterMenu .MenuItem img {
   width: 0.6rem;
   height: 0.6rem;
@@ -71,7 +67,33 @@ body {
   height: 100vh;
   width: 300px;
   max-width: 60vw;
-  padding-top: 2rem;
+}
+
+#Header #SideMenu #SideMenuHeader {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#Header #SideMenu #SideMenuCloseBtn {
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-right: -0.5rem;
+  border: none;
+}
+
+#Header #SideMenu .MenuItem {
+  justify-content: space-between;
+  width: 100%;
+}
+
+#Header #SideMenu.show {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 100;
 }
 
 #Header #SideMenuBackdrop {
@@ -87,13 +109,6 @@ body {
 
 #Header #SideMenuBackdrop.show {
   display: block;
-}
-
-#Header #SideMenu.show {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  z-index: 100;
 }
 
 #Header #SideMenu .MenuItem {
