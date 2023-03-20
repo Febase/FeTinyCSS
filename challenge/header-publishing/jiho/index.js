@@ -8,6 +8,8 @@ moreButton.addEventListener("click", () => {
 });
 
 sideMenuBackDrop.addEventListener("click", () => {
+  console.log("JIHO");
+
   closeSideMenu();
 });
 
