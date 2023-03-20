@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Document</title>
+</head>
+<body>
+  <nav>
+    <div class="nav__items "><img class="nav__items--logo" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="logo"></div>
+    <div class="nav__items nav__items--routes">
+      <a class="nav__items--route" href="#open-product-dropdown">
+        <p>Product</p><svg class="nav__icon--downarrow" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+        </svg>
+      </a>
+      <a class="nav__items--route" href="#">Features</a>
+      <a class="nav__items--route" href="#">Marketplace</a>
+      <a class="nav__items--route" href="#">Company</a>
+    </div>
+    <button class="nav__items nav__items--login">
+      <p>login</p>
+    </button>
+    <!-- ui상으로 항상 센터에서 열리는 느낌이라 센터로 띄움 -->
+    <div id="open-product-dropdown" class="nav__product-dropdown">
+      <div class="nav__product-dropdown--item">
+        <div class="nav__product-dropdown--logo"><svg class="h-6 w-6 text-gray-600 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+          </svg></div>
+        <div class="nav__product-dropdown--textbox">
+          <p class="nav__product-dropdown--title">Analytics</p>
+          <p class="nav__product-dropdown--description">Get a better understanding of your traffic</p>
+        </div>
+      </div>
+      <div class="nav__product-dropdown--item">
+        <div class="nav__product-dropdown--logo"><svg class="h-6 w-6 text-gray-600 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+          </svg></div>
+        <div class="nav__product-dropdown--textbox">
+          <p class="nav__product-dropdown--title">Analytics</p>
+          <p class="nav__product-dropdown--description">Get a better understanding of your traffic</p>
+        </div>
+      </div>
+      <div class="nav__product-dropdown--item">
+        <div class="nav__product-dropdown--logo"><svg class="h-6 w-6 text-gray-600 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+          </svg></div>
+        <div class="nav__product-dropdown--textbox">
+          <p class="nav__product-dropdown--title">Analytics</p>
+          <p class="nav__product-dropdown--description">Get a better understanding of your traffic</p>
+        </div>
+      </div>
+      <div class="nav__product-dropdown--item">
+        <div class="nav__product-dropdown--logo"><svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+          </svg></div>
+        <div class="nav__product-dropdown--textbox">
+          <p class="nav__product-dropdown--title">Analytics</p>
+          <p class="nav__product-dropdown--description">Get a better understanding of your traffic</p>
+        </div>
+      </div>
+    </div>
+    <a class="nav__items nav__icon--hamburger" href="#open-sidebar">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+      </svg>
+    </a>
+    <div id="open-sidebar" class="nav__sidebar">
+      <div class="nav__items nav__sidebar--top">
+        <img class="nav__items--logo" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="logo" />
+        <a href="#" class="nav__icon--close">
+          <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+          </svg></a>
+      </div>
+      <div class="nav__sidebar-items--routes">
+        <a class="nav__sidebar-items--route" href="#">Product</a>
+        <div class="nav__sidebar--product-subs">
+          <a class="nav__sidebar--product-sub" href="#">Analytics</a>
+          <a class="nav__sidebar--product-sub" href="#">Analytics</a>
+          <a class="nav__sidebar--product-sub" href="#">Analytics</a>
+          <a class="nav__sidebar--product-sub" href="#">Analytics</a>
+  
+        </div>
+        <a class="nav__sidebar-items--route" href="#">Features</a>
+        <a class="nav__sidebar-items--route" href="#">Marketplace</a>
+        <a class="nav__sidebar-items--route" href="#">Company</a>
+      </div>
+    </div>
+  </nav>
+</body>
+</html>
