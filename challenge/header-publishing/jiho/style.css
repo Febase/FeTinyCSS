@@ -1,0 +1,230 @@
+:root {
+  --main-font-color: black;
+  --bkg-color: white;
+  --banner-bkg-color: grey;
+  --banner-font-color: white;
+  --border-color: #eeeeee;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-font-color: white;
+    --bkg-color: #222;
+    --border-color: #555555;
+    --banner-bkg-color: #ffff00;
+    --banner-font-color: black;
+  }
+}
+
+html,
+body {
+  background-color: var(--bkg-color);
+  color: var(--main-font-color);
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+header {
+  position: sticky;
+  top: -50px;
+}
+
+#Banner {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--banner-bkg-color);
+  color: var(--banner-font-color);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+#Banner p {
+  padding: 0;
+  margin: 0;
+}
+
+#Header {
+  /* Tip: Stick Header */
+  padding: 0.5rem 1.5rem;
+  background-color: var(--bkg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+#Header #Logo {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.8rem 1rem;
+}
+
+#Header #Logo img {
+  width: 100%;
+  height: 100%;
+}
+
+#Header #HeaderCenterMenu {
+  justify-content: center;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (max-width: 500px) {
+  #Header #HeaderCenterMenu {
+    display: none;
+  }
+}
+
+.MenuItem {
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: var(--main-font-color);
+}
+
+#Header #HeaderCenterMenu .MenuItem img {
+  width: 0.6rem;
+  height: 0.6rem;
+  padding: 3px;
+  margin-left: 0.3rem;
+}
+
+#Header #SideMenu {
+  display: block;
+  position: fixed;
+  border-left: 1px solid var(--border-color);
+  background-color: var(--bkg-color);
+  top: 0px;
+  right: 0px;
+  height: 100vh;
+  width: 300px;
+  max-width: 60vw;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(100%);
+  transition: opacity 1s 0s ease, transform 1s 0s ease;
+}
+
+#Header #SideMenu #SideMenuHeader {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#Header #SideMenu #SideMenuCloseBtn {
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-right: -0.5rem;
+  border: none;
+}
+
+#Header #SideMenu .MenuItem {
+  justify-content: space-between;
+  width: 100%;
+}
+
+#Header #SideMenu.show {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 100;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0%);
+}
+
+#Header #SideMenuBackdrop {
+  display: block;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 99;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s 0s ease;
+}
+
+#Header #SideMenuBackdrop.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#Header #SideMenu .MenuItem {
+  padding: 1rem;
+}
+
+#Header #SideMenu .MenuItem:hover {
+  background-color: #eee;
+}
+
+#Header #HeaderRightMenu {
+  display: flex;
+}
+
+#Header #HeaderRightMenu #LoginButton {
+  cursor: pointer;
+  padding: 0.8rem 1rem;
+  color: var(--main-font-color);
+  font-size: 1rem;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+#Header #HeaderRightMenu #LoginButton img {
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.5rem;
+}
+
+#Header #HeaderRightMenu #MoreButton {
+  cursor: pointer;
+  padding: 0.8rem 1rem;
+  color: var(--main-font-color);
+  font-size: 1rem;
+  border: none;
+  background-color: transparent;
+  display: none;
+  align-items: center;
+  font-size: 1rem;
+}
+
+#Header #HeaderRightMenu #MoreButton img {
+  width: 1rem;
+  height: 1rem;
+}
+
+@media (max-width: 500px) {
+  #Header #HeaderRightMenu #LoginButton {
+    display: none;
+  }
+  #Header #HeaderRightMenu #MoreButton {
+    display: block;
+  }
+}
+
+main {
+  overflow: scroll;
+  padding: 1.5rem;
+}
+
+main h1 {
+  margin: 0px;
+}
