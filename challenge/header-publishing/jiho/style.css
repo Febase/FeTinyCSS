@@ -1,5 +1,24 @@
+:root {
+  --main-font-color: black;
+  --bkg-color: white;
+  --banner-bkg-color: grey;
+  --banner-font-color: white;
+  --border-color: #eeeeee;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-font-color: white;
+    --bkg-color: #222;
+    --border-color: #555555;
+    --banner-bkg-color: #ffff00;
+    --banner-font-color: black;
+  }
+}
+
 html,
 body {
+  background-color: var(--bkg-color);
+  color: var(--main-font-color);
   margin: 0px;
   box-sizing: border-box;
 }
@@ -14,8 +33,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: grey;
-  color: white;
+  background-color: var(--banner-bkg-color);
+  color: var(--banner-font-color);
   font-weight: 700;
   font-size: 1.5rem;
 }
@@ -28,11 +47,11 @@ header {
 #Header {
   /* Tip: Stick Header */
   padding: 0.5rem 1.5rem;
-  background-color: white;
+  background-color: var(--bkg-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--border-color);
 }
 
 #Header #Logo {
@@ -70,6 +89,7 @@ header {
   cursor: pointer;
   display: flex;
   align-items: center;
+  color: var(--main-font-color);
 }
 
 #Header #HeaderCenterMenu .MenuItem img {
@@ -82,8 +102,8 @@ header {
 #Header #SideMenu {
   display: none;
   position: fixed;
-  border-left: 1px solid #eee;
-  background-color: #fff;
+  border-left: 1px solid var(--border-color);
+  background-color: var(--bkg-color);
   top: 0px;
   right: 0px;
   height: 100vh;
@@ -148,7 +168,7 @@ header {
 #Header #HeaderRightMenu #LoginButton {
   cursor: pointer;
   padding: 0.8rem 1rem;
-  color: black;
+  color: var(--main-font-color);
   font-size: 1rem;
   border: none;
   background-color: transparent;
@@ -166,7 +186,7 @@ header {
 #Header #HeaderRightMenu #MoreButton {
   cursor: pointer;
   padding: 0.8rem 1rem;
-  color: black;
+  color: var(--main-font-color);
   font-size: 1rem;
   border: none;
   background-color: transparent;
